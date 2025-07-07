@@ -30,7 +30,7 @@ export default function App() {
       }
     }
     if (squares.every((square) => square !== null)) {
-      return { winner: "Draw", lines: [] };
+      return { winner: "Draw", line: [] };
     }
     return null;
   };
