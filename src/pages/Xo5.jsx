@@ -107,7 +107,7 @@ export default function Xo5() {
 
 function Board({ squares, winnerLines, onClick }) {
   return (
-    <div className="grid grid-cols-5 gap-2 p-2 rounded-xl  ">
+    <div className="grid grid-cols-5 gap-1 sm:gap-2 p-1 sm:p-2 rounded-xl">
       {squares.map((square, i) => (
         <Square
           key={i}
@@ -122,7 +122,7 @@ function Board({ squares, winnerLines, onClick }) {
 
 function Square({ value, isWinning, onClick }) {
   const baseStyle =
-    "w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 flex items-center justify-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl hover:bg-zinc-700 font-bold transition-all duration-300 rounded-lg";
+    "w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 flex items-center justify-center text-2xl sm:text-4xl md:text-6xl hover:bg-zinc-700 font-bold transition-all duration-300 rounded-lg";
   let markStyle = "";
   if (value === "X") {
     markStyle = "text-red-500 [text-shadow:0_0_5px_#ef4444,0_0_15px_#ef4444]";
